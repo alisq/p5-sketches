@@ -4,9 +4,8 @@ function preload() {
 }
 function setup() {
 	createCanvas(1000,1000)
-  image(img, 0, 0);
-
-loadPixels();
+  	image(img, 0, 0);
+	loadPixels();
 
 
 // noStroke();
@@ -15,9 +14,10 @@ loadPixels();
 	for (let j=0; j< 1000;j+=10) {
 
 		let c = get(j,i)[0]
-		console.log(c)
+		//console.log(c)
 	//	stroke(c)
 		var r = random(20)
+		//r = 3
 		if (c != 255) {
 		ellipse(j,i,r,r)
 	}
@@ -26,8 +26,5 @@ loadPixels();
  }
 
 
-  let c = get(50, 90);
-  fill(c);
-  noStroke();
-  rect(25, 25, 50, 50);
+  
 }

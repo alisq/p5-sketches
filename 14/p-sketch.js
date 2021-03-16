@@ -30,7 +30,7 @@ function draw() {
 
 	for(i=0;i<totalSteps;i++) {
 		push();
-		rotate(45)
+		rotate(45	)
 		ellipseWidth = startingEllipse+(i*stepDistance);
 		ellipse(width/2, height/2,ellipseWidth,height);
 		pop();

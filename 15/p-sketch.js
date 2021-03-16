@@ -1,10 +1,7 @@
-const sketchNumber = "09";
+const sketchNumber = "15";
 const sWidth = 1000;
 const sHeight = 1000;
 let points;
-let vehicles = [];
-let size = [];
-direction = [];
 
 function preload() {
 	font  = loadFont('assets/kada.otf')
@@ -12,8 +9,16 @@ function preload() {
 
 function setup() {
 	createCanvas(sWidth,sHeight);
+	textFont(font)
+  	//textSize(1200);
+	//text('P',100,900)
 	points = font.textToPoints('P', 100,900,1200,{sampleFactor:0.05});
-	
+	noFill();
+	console.log(points)
+	for (i=0;i<points.length;i++) {
+		//randomSize = random(10,30);
+		ellipse(points[i].x, points[i].y,10+(i/10),10+(i/10))
+	}
 
 
 	// for (i=0;i<points.length;i++) {
